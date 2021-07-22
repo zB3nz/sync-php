@@ -282,7 +282,7 @@ function main()
         prettyJson($response);
 
         $is_twofa = False;
-        if($response[sizeof($response)->code] == 410) {
+        if($response[sizeof($response) - 1]->code == 410) {
             $is_twofa = True;
             echo "Is two-fa!".PHP_EOL;
         }
